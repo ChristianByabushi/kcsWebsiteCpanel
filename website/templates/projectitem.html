@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block contents %}
+{% load static %}
+<div>
+    <div class="container-fluid bg-primary bg-header " style="margin-bottom: 90px;">
+        <div class="row py-5">
+            <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                <h1 class="display-4 text-white animated zoomIn">Project-Details</h1>
+                <a href="" class="h5 text-white">kcs</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="" class="h5 text-white">Projet</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container-fluid py-5 wow fadeInUp p-10" data-wow-delay="0.5">
+            <div class="text-center">
+                <h2 class=" fw-bold"> {{ projectitem.projecttitle }}</h2>
+                <img src="{% static projectitem.image %}" class="projectitemImage" alt="project's image not fund">
+                <div class="text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                    <div class="d-inline">
+                        Du <small> <i
+                                class="far fa-calendar-alt text-primary me-2"></i>{{projectitem.date_start}}</small>
+                        <u class="underline px-2 py-2 ">au</u><small><i
+                                class="far fa-calendar-alt text-primary me-2"></i>{{projectitem.date_end}}</small>
+                    </div>
+                    <p>{{ projectitem.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
